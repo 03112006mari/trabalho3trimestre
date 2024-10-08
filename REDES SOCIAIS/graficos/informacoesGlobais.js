@@ -1,6 +1,6 @@
 const url ='https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json'
 
-async function vizualizarinformacoesGlobais() {
+async function vizualizarInformacoesGlobais() {
 const res = await fetch(url)
 const dados = await res.json()
   const pessoasConectadas = (dados.total_pessoas_conectadas /1e9)
@@ -16,4 +16,4 @@ paragrafo.innerHTML = 'Você sabia que o mundo tem<span>${pessoasNoMundo} bilhõ
 const container = document.getElementById('graficos-container')
 container.appendchild(paragrafo)
 }
-vizualizarinformacoesGlobais()
+vizualizarInformacoesGlobais()
